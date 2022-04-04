@@ -1,0 +1,7 @@
+SELECT DISTINCT dp.department_cd,
+                dp.department_dsc
+FROM wkb_ddc_n_food.dim_product_dn dp
+WHERE dp.aggr_key = 1 
+    AND dp.key_status = ‘A’
+ORDER BY dn.department_cd,
+      dn.department_dsc
